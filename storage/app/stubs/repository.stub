@@ -1,0 +1,26 @@
+<?php
+
+namespace MyRepositoryNamespace;
+
+use App\Models\MyModelNamespace;
+use App\Core\BaseRepository;
+
+class MyRepository extends BaseRepository
+{
+    /**
+     * Repository property
+     *
+     * @var Object
+     */
+    protected $entity;
+
+    /**
+     * Create a new repository instance.
+     *
+     * @return void
+     */
+    public function __construct(MyModelNamespace $myModelVariable)
+    {
+        $this->entity = $myModelVariable;
+    }
+}
